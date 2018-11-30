@@ -1,0 +1,71 @@
+body{
+	margin-top: 100px;
+	background-color: #E5EBEB;
+	font-size: 18px;
+	font-family: "Myriad Pro";
+}
+.navbar-default{
+	background-color: #00E76D;
+	margin: 0;
+	border: none;
+}
+.navbar-nav>li{
+	padding-top: 5px;
+}
+.navbar-nav>li>a{
+	margin-top:10px;
+}
+#dropdown-menu-1{
+	background-color: #00E76D;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a{
+	color: white;
+}
+
+.clear{
+	overflow: auto;
+}
+.border-table{
+	border: 0.5px solid black;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+	background-color: #88f193e0;
+}
+
+hr{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(57,86,118, 0.80), rgba(0, 0, 0, 0));
+}
+.today{
+	font-size: 19px;
+	line-height: 1.1;
+	font-weight: bolder;
+}
+h1{
+	color:#70C67B;
+}
+.label{
+	font-size: 20px;
+}
+#preview-textfield{
+	position: absolute;
+    font-size: 30px;
+    padding-left: 133px;
+    top: 115px;
+}
+.label-danger{
+	background-color: red;
+}
+.label-warning{
+	background-color: orange;
+}
+.label-success{
+	background-color: greenyellow;
+}
+#now{
+	background-color: green;
+}

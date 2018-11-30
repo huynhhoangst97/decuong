@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="socket.io/socket.io.js"></script>
+	<script src="js/raphael.2.1.0.min.js"></script>
+	<script src="js/justgage.1.0.1.min.js"></script>
+	<script src="https://unpkg.com/gauge-chart@latest/dist/bundle.js"></script>
+	<script src="js/gauge.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/"><img alt="Brand" src="images/logo.png" style="width:70px"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="active">
+						<p class="navbar-text" style="color:white;font-size: 20px;">SMARTGREEN IOT CONTROL SYSTEM</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="container-fluid">
+			<h1 style="background-color:whitesmoke; padding: 30px"">Dashboard</h1>
+		</div>
+		<hr>
+		<div class="
+			 container-fluid" style="background-color:whitesmoke; padding: 30px">
+				<div class="row">
+					<div class="col-md-3">
+						<h3 style="color: #FF4F01">Environment Temperature:</h3>
+						<div id="temp"></div>
+					</div>
+					<div class="col-md-4">
+						<table class="table" id="temptable">
+							<p class="today" style="color: #6a9a1f"></p>
+							<tr>
+								<th>Max</th>
+
+								<td></td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<th>Min</th>
+								<td>null</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<th>Average</th>
+								<td>null</td>
+								<td>Today</td>
+							</tr>
+						</table>
+						<button type="button" class="btn btn-info" style="margin-bottom: 10px;"><a href="detail-temp" style="color:white">Detail</a></button>
+					</div>
+					<div class="col-md-5">
+						<canvas id="chartTemp"></canvas>
+					</div>
+				</div>
+		</div>
+		<hr>
+		<div class="container-fluid" style="background-color:whitesmoke; padding: 30px">
+			<div class="row">
+				<div class="col-md-3">
+					<h3 style="color: #4eb1ba">Environment Huminity:</h3>
+					<canvas id="hum" style="padding: 20px 0px;"></canvas>
+					<div id="preview-textfield">0%</div>
+				</div>
+				<div class="col-md-4">
+					<table class="table" id="humtable">
+						<p class="today" style="color: #6a9a1f"></p>
+						<tr>
+							<th>Max</th>
+
+							<td></td>
+							<td>null</td>
+						</tr>
+						<tr>
+							<th>Min</th>
+							<td>null</td>
+							<td>null</td>
+						</tr>
+						<tr>
+							<th>Average</th>
+							<td>null</td>
+							<td>Today</td>
+						</tr>
+					</table>
+					<button type="button" class="btn btn-info" style="margin-bottom: 10px;"><a href="detail-hum" style="color:white">Detail</a></button>
+				</div>
+				<div class="col-md-5">
+					<canvas id="chartHum" style="height: 22px;"></canvas>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid" style="background-color:whitesmoke; padding: 30px">
+			<div class="row">
+				<div class="col-md-7">
+					<canvas id="chartCo2" style="height: 22px;"></canvas>
+				</div>
+				<div class="col-md-5">
+					<table class="table" id="co2table">
+						<p class="today" style="color: #6a9a1f"></p>
+						<tr style="background-color: yellowgreen;">
+								<th>Now</th>
+								<td>null</td>
+								<td>Today</td>
+						</tr>
+							<th>Max</th>
+
+							<td></td>
+							<td>null</td>
+						</tr>
+						<tr>
+							<th>Min</th>
+							<td>null</td>
+							<td>null</td>
+						</tr>
+						<tr>
+							<th>Average</th>
+							<td>null</td>
+							<td>Today</td>
+						</tr>
+					</table>
+					<button type="button" class="btn btn-info" style="margin-bottom: 10px;">Detail</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="home-page/temperature.js"></script>
+	<script type="text/javascript" src="home-page/humidity.js"></script>
+	<script type="text/javascript" src="home-page/co2.js"></script>
+</body>
+
+</html>
